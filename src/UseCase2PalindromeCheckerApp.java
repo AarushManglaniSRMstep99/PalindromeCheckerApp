@@ -1,19 +1,20 @@
-/*
-* @author Aarush Manglani
-* @version 2.0
-*
- */
-import java.util.*;
+
 public class UseCase2PalindromeCheckerApp {
     public static void main(String[] args){
-        Scanner input =new Scanner(System.in);
-        String a =input.nextLine();
+        String a ="madam";
+        int b = 0;
         String rev="";
-        for(int i=a.length()-1;i>-1;i--){
-            rev+= a.charAt(i);
+        for(int i=0;i<a.length();i++){
+            if(a.charAt(i)==a.charAt(a.length()-i-1)){
+                b=0;
+            }
+            else{
+                b=1;
+                break;
+            }
         }
         System.out.print("Is it a Palindrome? : ");
-        if(a.equals(rev)){
+        if(b==0){
             System.out.print("true");
         }
         else{
